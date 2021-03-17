@@ -7,7 +7,7 @@ if modulo < 0:
     modulo = modulo * (-1)
 if modulo < a and a < (b+c):
     print('Estas retas podem formar um triângulo.')
-    if a == b and a == c:
+    if a == b == c:
         print('O triângulo formado é \033[1mEQUILÁTERO\033[m')
     elif a != b and a != c:
         print('O triângulo formado é \033[1mESCALENO\033[m')
