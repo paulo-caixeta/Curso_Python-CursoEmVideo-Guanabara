@@ -1,3 +1,3 @@
-for c in range(0, 50, 2):
+for c in range(0, 51, 2):
     if c > 0:
-        print(c)
+        print(c, end=' ')
