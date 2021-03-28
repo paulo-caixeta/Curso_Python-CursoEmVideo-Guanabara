@@ -1,18 +1,18 @@
 # Continuação do ex061 (Termos de PA)
+print('Gerador de PA')
+print('-=' * 10)
 primeiro = int(input('Primeiro termo: '))
 razão = int(input('Razão: '))
 i = 0
 n = 10
-novos = 1
+novos = 10
+total = 0
 while novos != 0:
-    while i < n:
-        PA = primeiro + razão * i
+    total = total + novos
+    while i < total:
+        termo = primeiro + razão * i
         i += 1
-        print(PA, end=' -> ')
-    print('FIM')
+        print(termo, end=' -> ')
+    print('PAUSA')
     novos = int(input('Deseja mostrar mais termos? Quantos? '))
-    while i < (n + novos):
-        PA = primeiro + razão * i
-        i += 1
-        print(PA, end=' -> ')
-    print('FIM')
+print('FIM')
