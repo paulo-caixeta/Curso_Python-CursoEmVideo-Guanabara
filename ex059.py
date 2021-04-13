@@ -10,7 +10,7 @@ ação = int(input('''Escolha a ação desejada:
         '''))
 while ação != 5:
     if ação == 1:
-        print('O resultado é {}'.format(n1 + n2))
+        print('A soma entre {} e {} é {}'.format(n1, n2, (n1 + n2)))
         ação = int(input('''Escolha a ação desejada:
         [1] somar
         [2] multiplicar
@@ -19,7 +19,7 @@ while ação != 5:
         [5] sair do programa
         '''))
     elif ação == 2:
-        print('O resultado é {}'.format(n1 * n2))
+        print('O resultado de {} x {} é {}'.format(n1, n2, n1 * n2))
         ação = int(input('''Escolha a ação desejada:
         [1] somar
         [2] multiplicar
