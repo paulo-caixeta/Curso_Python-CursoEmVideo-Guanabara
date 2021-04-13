@@ -9,24 +9,13 @@ while True:
         teste = str(input('Resposta inválida. Deseja continuar? [S/N] ')).upper().strip()
     if teste == ('N'):
         break
-
-'''for i in range(0, len(listaCompleta)):
-    if listaCompleta[i] % 2 == 0:
-        listaPar.append(listaCompleta[i])
+for i, v in enumerate(listaCompleta):
+    if v % 2 == 0:
+        listaPar.append(v)
     else:
-        listaImpar.append(listaCompleta[i])'''
-
-i = 0
-while i < len(listaCompleta):
-    if listaCompleta[i] % 2 == 0:
-        listaPar.append(listaCompleta[i])
-    else:
-        listaImpar.append(listaCompleta[i])
-    i = i + 1
+        listaImpar.append(v)
     print(listaPar)
-
 print('-=' * 30)
 print(f'Lista completa: {listaCompleta}')
 print(f'Lista de pares: {listaPar}')
 print(f'Lista de ímpares: {listaImpar}')
-

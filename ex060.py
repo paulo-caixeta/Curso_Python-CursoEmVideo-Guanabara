@@ -4,5 +4,5 @@ i = numero
 while i > 1:
     resultado =  i
     i = i - 1
-    resultado = resultado * (i-1)6
+    resultado = resultado * (i-1)
 print(resultado)
