@@ -6,12 +6,28 @@ print(f'{"JOGO DA MEGA SENA":^50}')
 print('-=' * 25)
 total_jogos = int(input('Quantos jogos você quer que eu sorteie? '))
 print('-' * 50)
-print(f'{"Sorteando...":^50}')
+print(' ' * 15, f'Sorteando {total_jogos} jogos', ' ' * 15)
 print('-' * 50)
-matrix = [[0], [0], [0], [0], [0], [0]]
-print(matrix)
+from time import sleep
 from random import randint
-for l in range (0, total_jogos):
-    for c in range (0, 6):
-        matrix[l][c].append(randint(1, 60))
-print(matrix)
+c = 0
+jogo = list()
+jogos = list()
+for i in range(0, total_jogos):
+    while True:
+        n = randint(1, 61)
+        if n not in jogo:
+            jogo.append(n)
+            c += 1
+        if c >= 6:
+            break
+    c = 0
+    jogo.sort()
+    jogos.append(jogo[:])
+    jogo.clear()
+for i, jogo in enumerate(jogos):
+    print(f'Jogo {i+1}: {jogos[i]}')
+    sleep(0.5)
+print('-' * 50)
+print(f'{"Boa sorte!":^50}')
+
